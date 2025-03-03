@@ -5,7 +5,7 @@ interface ButtonProps {
   icon?: ReactNode;
   bgColor?: string;
   textColor?: string;
-  containerClass?: React.CSSProperties;
+  containerClass?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -17,8 +17,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={`flex items-center justify-center gap-3 ${bgColor} ${textColor}`}
-      style={containerClass}
+      className={`flex items-center justify-center gap-3 ${bgColor} ${textColor} ${containerClass} btn border-none shadow-none`}
     >
       {icon && icon}
       {title}
