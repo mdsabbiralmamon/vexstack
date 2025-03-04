@@ -2,25 +2,24 @@ import React, { ReactNode } from "react";
 
 interface ButtonProps {
   title: string;
-  icon?: ReactNode;
-  bgColor?: string;
-  textColor?: string;
+  iconLeft?: ReactNode;
+  iconRight?: ReactNode;
   containerClass?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
   title,
-  icon,
-  bgColor,
-  textColor,
+  iconLeft,
+  iconRight,
   containerClass,
 }) => {
   return (
     <button
-      className={`flex items-center justify-center gap-3 ${bgColor} ${textColor} ${containerClass} btn border-none shadow-none`}
+      className={`flex items-center justify-center gap-3 ${containerClass}`}
     >
-      {icon && icon}
+      {iconLeft && iconLeft}
       {title}
+      {iconRight && iconRight}
     </button>
   );
 };
