@@ -1,0 +1,54 @@
+.navbar {
+  backdrop-filter: blur(5px);
+}
+
+.navlinks {
+  position: relative;
+  display: inline-block; /* Ensures it wraps around the text properly */
+  padding: 5px 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navlinks:hover {
+  color: #a855f7;
+  transition: opacity 0.3s ease;
+}
+
+/* Hidden by default */
+.navlinks::before,
+.navlinks::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 3px solid #a855f7;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Top-left corner */
+.navlinks::before {
+  top: -5px;
+  left: -5px;
+  border-right: none;
+  border-bottom: none;
+  transform: translate(-5px, -5px); /* Moves outward */
+}
+
+/* Bottom-right corner */
+.navlinks::after {
+  bottom: -5px;
+  right: -5px;
+  border-left: none;
+  border-top: none;
+  transform: translate(5px, 5px); /* Moves outward */
+}
+
+/* Show the borders on hover */
+.navlinks:hover::before,
+.navlinks:hover::after {
+  opacity: 1;
+  transform: translate(0, 0); /* Moves back to position */
+}
