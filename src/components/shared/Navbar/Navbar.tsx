@@ -51,10 +51,8 @@ const Navbar = () => {
         <div>
           <Button
             title="Contact Us"
-            icon={<FaPaperPlane />}
-            bgColor="bg-purple-500"
-            textColor="text-white"
-            containerClass="!py-2 !px-5 rounded-full font-semibold"
+            iconLeft={<FaPaperPlane />}
+            containerClass="!py-2 !px-5 rounded-full font-semibold bg-purple-500 text-white btn border-none shadow-none"
           />
         </div>
       </div>
