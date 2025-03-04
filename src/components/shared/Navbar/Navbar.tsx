@@ -2,7 +2,7 @@ import Button from "@/components/UI/Button/Button";
 import Image from "next/image";
 import React from "react";
 import { FaPaperPlane } from "react-icons/fa";
-import "./module.navbar.css";
+import styles from "./navbar.module.css";
 
 const Navbar = () => {
   const navLinks = [
@@ -25,7 +25,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50">
+    <nav className={`${styles.navbar} fixed top-0 left-0 right-0 z-50`}>
       <div className="flex items-center justify-between !py-5 !px-10 shadow-lg">
         <div className="cursor-pointer">
           <Image
@@ -39,7 +39,9 @@ const Navbar = () => {
           <ul className="flex items-center gap-7">
             {navLinks.map((link, index) => (
               <a href={`${link.url}`} key={index}>
-                <li className="font-semibold text-white hover:font-bold">
+                <li
+                  className={`${styles.navlinks} font-semibold text-white hover:font-bold`}
+                >
                   {link.title}
                 </li>
               </a>
