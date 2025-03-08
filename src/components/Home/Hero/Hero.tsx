@@ -1,7 +1,9 @@
 "use client";
 
+import BeamDot from "@/components/UI/BeamDot/BeamDot";
 import Button from "@/components/UI/Button/Button";
 import Counter from "@/components/UI/Counter/Counter";
+import Image from "next/image";
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
 import ReactPlayer from "react-player";
@@ -72,10 +74,42 @@ const Hero = () => {
               />
             </div>
           </div>
+          <div className="flex-1 hidden lg:flex justify-end items-center absolute right-0">
+            {/* beams */}
+            <div className="absolute bottom-60 right-56 ">
+              <BeamDot
+                dotColor="red"
+                beamColor="rgba(255, 0, 0, 0.3)"
+                tooltipImage="/images/assets/tooltip/tooltip-image.jpg"
+              />
+            </div>
+            <div className="absolute bottom-48 right-48 ">
+              <BeamDot
+                dotColor="blue"
+                beamColor="rgba(0, 0, 255, 0.3)"
+                tooltipImage="/images/assets/tooltip/tooltip-image-2.jpg"
+              />
+            </div>
+            <div className="absolute bottom-52 right-64 ">
+              <BeamDot
+                dotColor="green"
+                beamColor="rgba(0, 255, 0, 0.3)"
+                tooltipImage="/images/assets/tooltip/tooltip-image-1.jpg"
+              />
+            </div>
+            <Image
+              src="/images/assets/map.svg"
+              alt="World Map"
+              width={500}
+              height={500}
+              style={{ width: "700px", height: "auto" }}
+            />
+          </div>
         </div>
       </div>
       <div className="absolute inset-0 w-full h-full">
         <div className="relative w-full h-full">
+          <div className="!absolute top-0 left-0 !w-full !h-full bg-black/50 z-10"></div>
           <ReactPlayer
             url="/videos/home_video.mp4"
             playing={true}
