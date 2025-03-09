@@ -11,7 +11,7 @@ import ReactPlayer from "react-player";
 const Hero = () => {
   return (
     <div>
-      <div className="absolute bottom-0 right-0 z-50 flex gap-5 !p-8 !pb-5 bg-white items-center rounded-tl-3xl">
+      <div className="absolute bottom-0 right-0 z-30 flex gap-5 !p-8 !pb-5 bg-white items-center rounded-tl-3xl">
         <div>
           <Counter
             targetNumber={1000}
@@ -52,7 +52,7 @@ const Hero = () => {
           />
         </div>
       </div>
-      <div className="absolute top-1/2 -translate-y-1/2 z-50 w-full">
+      <div className="absolute top-1/2 -translate-y-1/2 z-20 w-full ">
         <div className="max-w-7xl !mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="flex-1">
             <h2 className="text-6xl text-white text-shadow font-bold">
