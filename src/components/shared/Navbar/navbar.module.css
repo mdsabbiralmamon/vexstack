@@ -52,3 +52,16 @@
   opacity: 1;
   transform: translate(0, 0); /* Moves back to position */
 }
+
+.rotate {
+  color: #a855f7;
+  transition: transform 0.3s ease-in-out;
+}
+
+.rotateOpen {
+  transform: rotate(180deg);
+}
+
+.rotateClose {
+  transform: rotate(0deg);
+}
