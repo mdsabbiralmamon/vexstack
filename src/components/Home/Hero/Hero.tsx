@@ -11,14 +11,14 @@ import ReactPlayer from "react-player";
 const Hero = () => {
   return (
     <div>
-      <div className="absolute bottom-0 right-0 z-30 flex gap-5 !p-8 !pb-5 bg-white items-center rounded-tl-3xl">
+      <div className="absolute bottom-0 right-0 z-30 flex gap-2 md:gap-5 !p-2 md:!p-8 !pb-5 bg-white items-center md:rounded-tl-3xl text-center">
         <div>
           <Counter
             targetNumber={1000}
             title={"Projects Completed"}
             duration={2}
-            containerCountClass={`text-4xl font-bold text-purple-500`}
-            containerTitleClass={`font-bold text-purple-500`}
+            containerCountClass={`text-xl md:text-4xl font-bold text-purple-500`}
+            containerTitleClass={`text-sm md:text-base font-bold text-purple-500`}
           />
         </div>
         <div className="h-10 w-0.5 bg-gray-500"></div>
@@ -27,8 +27,8 @@ const Hero = () => {
             targetNumber={20}
             title={"Experienced Staff"}
             duration={2}
-            containerCountClass={`text-4xl font-bold text-purple-500`}
-            containerTitleClass={`font-bold text-purple-500`}
+            containerCountClass={`text-xl md:text-4xl font-bold text-purple-500`}
+            containerTitleClass={`text-sm md:text-base font-bold text-purple-500`}
           />
         </div>
         <div className="h-10 w-0.5 bg-gray-500"></div>
@@ -37,8 +37,8 @@ const Hero = () => {
             targetNumber={4}
             title={"Ongoing Projects"}
             duration={2}
-            containerCountClass={`text-4xl font-bold text-purple-500`}
-            containerTitleClass={`font-bold text-purple-500`}
+            containerCountClass={`text-xl md:text-4xl font-bold text-purple-500`}
+            containerTitleClass={`text-sm md:text-base font-bold text-purple-500`}
           />
         </div>
         <div className="h-10 w-0.5 bg-gray-500"></div>
@@ -47,14 +47,14 @@ const Hero = () => {
             targetNumber={3}
             title={"Years of Experience"}
             duration={2}
-            containerCountClass={`text-4xl font-bold text-purple-500`}
-            containerTitleClass={`font-bold text-purple-500`}
+            containerCountClass={`text-xl md:text-4xl font-bold text-purple-500`}
+            containerTitleClass={`text-sm md:text-base font-bold text-purple-500`}
           />
         </div>
       </div>
       <div className="absolute top-1/2 -translate-y-1/2 z-20 w-full ">
         <div className="max-w-7xl !mx-auto flex flex-col md:flex-row justify-between items-center">
-          <div className="flex-1">
+          <div className="flex-1 !p-4 md:p-0">
             <h2 className="text-6xl text-white text-shadow font-bold">
               We create <span className="text-purple-500">software</span> <br />{" "}
               for a sustainable <br /> future.
