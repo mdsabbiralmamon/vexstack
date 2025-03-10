@@ -7,6 +7,7 @@ import styles from "./navbar.module.css";
 import { PiCirclesThreeBold } from "react-icons/pi";
 import { GiThreePointedShuriken } from "react-icons/gi";
 import gsap from "gsap";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,13 +57,13 @@ const Navbar = () => {
         <div className="flex items-center justify-end">
           <ul className="hidden md:flex items-center gap-7">
             {navLinks.map((link, index) => (
-              <a href={link.url} key={index}>
+              <Link href={link.url} key={index}>
                 <li
                   className={`${styles.navlinks} font-semibold text-white hover:font-bold`}
                 >
                   {link.title}
                 </li>
-              </a>
+              </Link>
             ))}
           </ul>
         </div>
@@ -75,7 +76,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className={`md:hidden text-purple-500 ${
+            className={`md:hidden text-purple-500 font-bold text-2xl ${
               isOpen
                 ? styles.rotate + " " + styles.rotateOpen
                 : styles.rotate + " " + styles.rotateClose
@@ -89,7 +90,7 @@ const Navbar = () => {
       {/* Mobile Navigation Menu */}
       <div
         ref={menuRef}
-        className="absolute top-5 left-0 right-40 z-50 bg-white bg-opacity-80 text-purple-500 px-5 !py-10 flex flex-col gap-7 opacity-0 translate-y-[-20px] rounded-br-2xl"
+        className="absolute top-5 left-0 right-30 z-50 bg-white bg-opacity-80 text-purple-500 !px-5 !py-10 flex flex-col gap-7 opacity-0 translate-y-[-20px] rounded-br-2xl"
       >
         <div className="cursor-pointer">
           <Image
@@ -100,14 +101,19 @@ const Navbar = () => {
           />
         </div>
         {navLinks.map((link, index) => (
-          <a href={link.url} key={index}>
-            <li
-              className={`${styles.navlinks} font-semibold !text-purple-500 hover:font-bold`}
-            >
+          <Link href={link.url} key={index}>
+            <li className={`font-semibold !text-purple-500 list-none`}>
               {link.title}
             </li>
-          </a>
+          </Link>
         ))}
+        <div>
+          <Button
+            title="Contact Us"
+            iconLeft={<FaPaperPlane />}
+            containerClass="!py-2 !px-5 rounded-full font-semibold bg-purple-500 text-white btn border-none shadow-none text-nowrap"
+          />
+        </div>
         <div>© 2021 VexStack Digital. All Rights Reserved.</div>
       </div>
     </nav>
