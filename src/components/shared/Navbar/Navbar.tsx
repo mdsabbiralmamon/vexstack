@@ -90,7 +90,7 @@ const Navbar = () => {
       {/* Mobile Navigation Menu */}
       <div
         ref={menuRef}
-        className="absolute top-5 left-0 right-30 z-50 bg-white bg-opacity-80 text-purple-500 !px-5 !py-10 flex flex-col gap-7 opacity-0 translate-y-[-20px] rounded-br-2xl"
+        className="absolute top-5 left-0 right-20 z-50 bg-white bg-opacity-80 text-purple-500 !px-5 !py-10 flex flex-col gap-7 opacity-0 translate-y-[-20px] rounded-br-2xl"
       >
         <div className="cursor-pointer">
           <Image

@@ -11,7 +11,7 @@ import ReactPlayer from "react-player";
 const Hero = () => {
   return (
     <div>
-      <div className="absolute bottom-0 right-0 z-30 flex gap-2 md:gap-5 !p-2 md:!p-8 !pb-5 bg-white items-center md:rounded-tl-3xl text-center">
+      <div className="absolute bottom-0 right-0 w-full md:w-auto z-30 flex gap-2 md:gap-5 !p-2 md:!p-8 !pb-5 bg-white items-center justify-center md:justify-end md:rounded-tl-3xl text-center">
         <div>
           <Counter
             targetNumber={1000}
@@ -55,14 +55,14 @@ const Hero = () => {
       <div className="absolute top-1/2 -translate-y-1/2 z-20 w-full ">
         <div className="max-w-7xl !mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="flex-1 !p-4 md:p-0">
-            <h2 className="text-6xl text-white text-shadow font-bold">
+            <h2 className="text-4xl md:text-6xl text-white text-shadow font-bold">
               We create <span className="text-purple-500">software</span> <br />{" "}
               for a sustainable <br /> future.
             </h2>
-            <h3 className="text-gray-200 text-3xl !my-5">
+            <h3 className="text-gray-200 text-2xl md:text-3xl !my-5">
               We Execute Your Ideas From The Start To Finish
             </h3>
-            <div className="flex gap-5">
+            <div className="flex flex-col md:flex-row gap-5 ">
               <Button
                 title="Get In Touch"
                 iconRight={<MdArrowOutward className="text-xl" />}
