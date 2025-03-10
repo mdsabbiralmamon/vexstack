@@ -8,10 +8,12 @@ import { PiCirclesThreeBold } from "react-icons/pi";
 import { GiThreePointedShuriken } from "react-icons/gi";
 import gsap from "gsap";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const menuRef = useRef(null); // Reference for GSAP animation
+  const menuRef = useRef(null);
+  const pathname = usePathname();
 
   const navLinks = [
     { title: "Home", url: "/" },
@@ -24,7 +26,7 @@ const Navbar = () => {
     setIsOpen((prev) => !prev);
   };
 
-  // Use GSAP for animations
+  // GSAP animation for sliding menu
   useEffect(() => {
     if (isOpen) {
       gsap.to(menuRef.current, {
@@ -59,7 +61,10 @@ const Navbar = () => {
             {navLinks.map((link, index) => (
               <Link href={link.url} key={index}>
                 <li
-                  className={`${styles.navlinks} font-semibold text-white hover:font-bold`}
+                  className={`
+                    ${styles.navlinks} font-semibold text-white hover:font-bold 
+                    ${pathname === link.url ? "!text-purple-500 font-bold" : ""}
+                  `}
                 >
                   {link.title}
                 </li>
@@ -102,7 +107,11 @@ const Navbar = () => {
         </div>
         {navLinks.map((link, index) => (
           <Link href={link.url} key={index}>
-            <li className={`font-semibold !text-purple-500 list-none`}>
+            <li
+              className={`font-semibold !text-purple-500 list-none ${
+                pathname === link.url ? "!text-purple-700 !font-bold" : ""
+              }`}
+            >
               {link.title}
             </li>
           </Link>
